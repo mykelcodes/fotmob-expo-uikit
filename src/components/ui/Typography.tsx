@@ -26,7 +26,7 @@ export function Typography({
 const copyStyles: Record<TextVariant, object> = {
     headline_sm: {
         fontSize: 32,
-        lineHeight: '120%',
+        lineHeight: 38,
     },
     headline_xs: {
         fontSize: 28,
