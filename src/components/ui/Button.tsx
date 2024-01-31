@@ -1,5 +1,6 @@
-import { Pressable, StyleSheet, Text, View } from 'react-native'
+import { Pressable, StyleSheet, View } from 'react-native'
 
+import { Typography } from '@/components/ui/Typography'
 import { BrandColors } from '@/components/ui-constants'
 
 type Props = {
@@ -23,14 +24,13 @@ export function Button({ type = 'primary', title, onPress }: Props) {
                             pressed && styles[`${type}Active`],
                         ]}
                     >
-                        <Text
-                            style={[
-                                styles.buttonText,
-                                type === 'secondary' && styles.secondaryText,
-                            ]}
+                        <Typography
+                            variant="body_md"
+                            weight="600"
+                            style={type !== 'secondary' && styles.buttonText}
                         >
                             {title}
-                        </Text>
+                        </Typography>
                     </View>
                 )
             }}
@@ -74,12 +74,7 @@ const styles = StyleSheet.create({
         backgroundColor: BrandColors.blackActive,
     },
     buttonText: {
-        fontSize: 16,
-        fontWeight: '600',
         color: BrandColors.white,
-    },
-    secondaryText: {
-        color: BrandColors.black,
     },
 })
 

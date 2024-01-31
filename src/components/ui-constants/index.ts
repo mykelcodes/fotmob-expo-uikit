@@ -12,3 +12,19 @@ export enum BrandColors {
     blackHover = '#261A21',
     blackActive = '#44383F',
 }
+
+export const TextVariants = {
+    headline_sm: 'headline_sm',
+    headline_xs: 'headline_xs',
+    body_xl: 'body_xl',
+    body_lg: 'body_lg',
+    body_md: 'body_md',
+    body_sm: 'body_sm',
+    body_xs: 'body_xs',
+} as const
+
+export type TextVariant = (typeof TextVariants)[keyof typeof TextVariants]
+
+export const TextWeights = ['normal', '600', 'bold'] as const
+
+export type TextWeight = (typeof TextWeights)[number]
