@@ -55,6 +55,7 @@ const copyStyles: Record<TextVariant, object> = {
 }
 
 const weightStyles: Record<TextWeight, object> = {
+    // can include fontFamily for each weight here
     normal: {
         fontWeight: 'normal',
     },
